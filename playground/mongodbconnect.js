@@ -27,7 +27,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', {
 		console.log(JSON.stringify(result.ops, undefined, 2));
 
 	}); */
-	/* db.collection('Users').insertOne({
+	db.collection('Users').insertOne({
 
 		name: "Aadrita Bhat  Khosla",
 		age: 2,
@@ -37,11 +37,11 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', {
 			return console.log('error in insertion');
 
 		}
-		var id = result.ops[0]._id;
+		/*var id = result.ops[0]._id;
 		console.log(id.getTimeStamp());
 
 	}); */
-
+	});
 	client.close();
 
 })
