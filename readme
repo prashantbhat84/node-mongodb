@@ -4,4 +4,4 @@ google update drivers while updating document
 mongoose validators
 mongoose schemas
 
-local db start mongodb: 
+local db start mongodb:  mongod --dbpath=<path>
