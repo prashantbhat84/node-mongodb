@@ -7,7 +7,9 @@ const {
 const {
 	Todo
 } = require('./../server/models/todo');
-const User = require('./../server/models/user.js');
+const {
+	User
+} = require('./../server/models/user');
 var id = '5c5082fb5c761d609cf3fe80';
 //checking the validity of id
 /* if (!ObjectID.isValid(id)) {
@@ -37,9 +39,9 @@ Todo.findOne({
 }).catch(e => {
 	console.log(`error:${e}`);
 
-}) */
+}); */
 User.findById("5c5082fb5c761d609cf3fe80").then((user) => {
-	if (!todo) {
+	if (!user) {
 		return console.log('ID not found');
 
 	}
