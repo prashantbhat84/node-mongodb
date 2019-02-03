@@ -11,6 +11,9 @@ var port = process.env.PORT || 3000;
 var express = require('express');
 var bodyParser = require('body-parser');
 var _ = require('lodash');
+const {
+	authenticate
+} = require('./middleware/authenticate');
 var app = express();
 app.use(bodyParser.json());
 
@@ -57,6 +60,10 @@ app.post('/users', (req, res) => {
 		res.status(400).send(e);
 	});
 });
+
+app.get('/users/me', authenticate, (req, res) => {
+	res.send(req.user);
+})
 
 
 
